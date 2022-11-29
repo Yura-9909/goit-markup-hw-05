@@ -7,6 +7,10 @@ ul{
     padding: 0;
 }
 
+button{
+    cursor: pointer;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -64,7 +68,11 @@ body {
     font-size: 14px;
     line-height: 1.1428;
     letter-spacing: 0.02em;
-    display: flex;       
+    display: flex; 
+    position: relative;  
+    padding: 32px 0; 
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)       
 }
 .header-nav-items:hover{
     color: var(--blue-color);
@@ -87,6 +95,8 @@ body {
     text-decoration: none;
     display: flex;
     gap: 10px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .header-nav-link:hover
@@ -146,6 +156,37 @@ body {
     fill: var(--title-color);
 }
 
+.current-main::after{
+    content: '';
+    display: block;
+    background-color: var(--blue-color);
+    border-radius: 2px; 
+    height: 4px;   
+    position: absolute;    
+    transition-property: opacity;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    width: 100%;    
+}
+
+.current-portfolio::after{
+    content: '';
+    display: block;
+    background-color: var(--blue-color);
+    border-radius: 2px; 
+    height: 4px;   
+    position: absolute;    
+    transition-property: opacity;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    width: 100%;
+}
+
+.header-nav-items .current-main::after{
+    opacity: 1;
+}
 /*--------------header---------------*/
 
 /*---------------main----------------*/
@@ -253,7 +294,7 @@ body {
     padding-bottom: 94px;
 }
 
-.img-list{    
+.img-par{    
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -265,6 +306,24 @@ body {
     list-style: none;
     display: flex;
     gap: 30px;
+}
+
+.img-list{
+    position: relative;
+}
+
+.img-work{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.142;
+    text-align: center;
+    letter-spacing: 0.03em;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
 }
 
 /*---section teams-----*/
@@ -343,6 +402,8 @@ body {
 .team-soc-items{
     width: 44px;
     height: 44px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .team-soc-link{
@@ -354,6 +415,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 .team-soc-link:hover{
     background-color: var(--blue-color);
@@ -401,10 +464,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+
 }
 
 .visitors-icons{
     fill: rgb(175,177,184);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .visitors-link:hover{
@@ -468,7 +536,9 @@ body {
     letter-spacing: 0.03em;    
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;  
-    margin-bottom: 9px;  
+    margin-bottom: 9px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)  
 }
 
 .footer-mail:hover{
@@ -488,7 +558,9 @@ body {
     line-height: 1.714;      
     letter-spacing: 0.03em;    
     color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;       
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)       
 }
 
 .footer-tel:hover{
@@ -534,8 +606,11 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
-    align-items: center;    
+    align-items: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)    
 }
+
 .footer-soc-link:hover{
     background-color: var(--blue-color);
 }
@@ -552,6 +627,8 @@ body {
 
 .footer-soc-icons{
     fill: #FFFFFF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*--------------footer---------------*/
@@ -573,6 +650,8 @@ body {
     justify-content: center;
     gap: 8px;
     margin-bottom: 50px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .btn-items:hover{
@@ -587,6 +666,8 @@ body {
     background-color: var(--blue-color);  
     cursor: pointer;
     color: #FFFFFF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .btn-style-all:focus{
@@ -606,7 +687,9 @@ body {
     border: transparent;
     background: #F5F4FA;
     padding: 6px 25px; 
-    border-radius: 4px;  
+    border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)  
 }
 
 .btn-style{
@@ -620,18 +703,20 @@ body {
     border: transparent;
     background: #F5F4FA;
     padding: 6px 22px; 
-    border-radius: 4px;          
+    border-radius: 4px; 
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)         
 }
 
 .btn-style:hover{
     background-color: var(--blue-color);  
     cursor: pointer; 
-    color: #FFFFFF;    
+    color: #FFFFFF; 
 }
 .btn-style:focus{
     background-color: var(--blue-color);  
     cursor: pointer; 
-    color: #FFFFFF;    
+    color: #FFFFFF;  
 }
 
 .box-portfolio{
@@ -642,25 +727,45 @@ body {
 }
 
 .portfolio-items{
-    outline: 1px solid #EEEEEE;   
+    outline: 1px solid #EEEEEE; 
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)     
 }
 
 .portfolio-items:hover{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
+.portfolio-items:hover .portfolio-inform{
+    transform: translateY(0);
+}
+
 .portfolio-items:focus{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-link{
-   text-decoration: none;
+   text-decoration: none;   
 }
 
-.portfolio-list{    
+.img-box{
+    position: relative; 
+    overflow: hidden;
+}
+
+.portfolio-inform{
+    position: absolute;
     font-size: 18px;
-    line-height: 2;    
-    letter-spacing: 0.06em;    
-    color: #212121;    
+    line-height: 1.555;
+    letter-spacing: 0.03em;
+    top: 0;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 23px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio-text{ 
@@ -670,9 +775,65 @@ body {
     color: var(--uptitle-color);
 }
 
+.portfolio-list{    
+    font-size: 18px;
+    line-height: 2;    
+    letter-spacing: 0.06em;    
+    color: #212121;    
+}
+
 .portfolio-content{
     padding-top: 20px;
     padding-left: 24px;
     padding-bottom: 20px;
 }
 
+/*------------portfolio--------------*/
+
+/*------------modal-wind-------------*/
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 48, 58, 0.4);
+    transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.modal{
+    min-height: 528px;
+    width: 581px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms linear;
+}
+
+.backdrop .is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-close{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;   
+}
+
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;  
+}

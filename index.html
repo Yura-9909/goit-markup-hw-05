@@ -17,7 +17,7 @@
                 <a class="logo-Web" href="./index.html">Web<span class="logo-Studio">Studio</span></a>
                 <nav class="navigation">
                     <ul class="nav-items">
-                        <li><a class="header-nav-items" href="./index.html">Студія</a></li>
+                        <li><a class="header-nav-items current-main" href="./index.html">Студія</a></li>
                         <li><a class="header-nav-items" href="./portfolio.html">Портфоліо</a></li>
                         <li><a class="header-nav-items" href="#">Контакти</a></li>
                     </ul>
@@ -41,7 +41,7 @@
             <section class="title-page backgroung-title">                
                 <div class="container container-caption">
                     <h1 class="title-page-caption">Ефективні рішення для вашого бізнесу</h1>
-                    <button class="title-btn" type="button">Замовити послугу</button>      
+                    <button class="title-btn" type="button" data-modal-open>Замовити послугу</button>      
                 </div>          
             </section>                            
                       
@@ -92,16 +92,19 @@
 
             <section class="container container-img">
                 
-                <h2 class="img-list">Чим ми займаємося</h2>
+                <h2 class="img-par">Чим ми займаємося</h2>
                 <ul class="img-items">
-                    <li>
+                    <li class="img-list">
                          <img src="./images/laptop.jpg" width="370" height="294" alt="work from a laptop">
+                         <p class="img-work">ДУСКТОПНІ ДОДАТКИ</p>
                     </li>
-                    <li>
+                    <li class="img-list">
                         <img src="./images/phone.jpg" width="370" height="294" alt="work from the phone">
+                        <p class="img-work">МОБІЛЬНІ ДОДАТКИ</p>
                     </li>
-                    <li>
+                    <li class="img-list">
                         <img src="./images/tablet.jpg" width="370" height="294" alt="work from a tablet">
+                        <p class="img-work">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
                     </li>
                 </ul>
                 
@@ -383,8 +386,19 @@
                         </li>                                    
                     </ul>
                 </div>
-            </div> 
+            </div>       
             
         </footer>
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>
+                    <svg width="18" height="18">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>                    
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
